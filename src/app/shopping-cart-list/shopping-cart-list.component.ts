@@ -18,10 +18,11 @@ export class ShoppingCartListComponent implements OnInit {
   titleTax: string="稅金(5%)";
   titleTotal: string="總計金額";
 
-  constructor(private shoppingCartService:ShoppingCartService=null) {
+  constructor(public shoppingCartService:ShoppingCartService=null) {
   }
 
   ngOnInit() {
+    console.log(this.shoppingCartService.shoppingCarts);
   }
 
   calculatePrice(price,quantity){

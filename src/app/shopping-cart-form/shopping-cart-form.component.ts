@@ -10,14 +10,21 @@ import { ShoppingCart } from '../shopping-cart';
 })
 export class ShoppingCartFormComponent implements OnInit {
 
-  // name:string="ProductName"
-  price:number=0;
-  quantity:number=0;
   private shoppingCart:ShoppingCart;
+  private name: string;
+  private price: number;
+  private quantity: number;
+  private isEdit:boolean;
   constructor(private shoppingCartService:ShoppingCartService=null) {}
 
+
   ngOnInit() {
-    // this.shoppingCart=new ShoppingCart();
+    this.name="BMW";
+    this.price=1000;
+    this.quantity=1;
+    this.isEdit=false;
+    //  this.shoppingCart=this.shoppingCartService.shoppingCarts[0];
+    //  this.shoppingCart=new ShoppingCart(null,0,0,false);
   }
 
   calculate(price,quantity){
@@ -26,6 +33,6 @@ export class ShoppingCartFormComponent implements OnInit {
 
   onSubmit(){
     this.shoppingCartService.shoppingCarts.push(this.shoppingCart);
-    this.shoppingCart=new ShoppingCart();
+    // this.shoppingCart=new ShoppingCart(null,0,0,false);
   }
 }

@@ -7,18 +7,10 @@ import 'rxjs/add/operator/toPromise' ;
 export class ShoppingCartService {
 
   // private shoppingCartsUrl='/api/shoppingCart.json';
-  public shoppingCarts;
+  public shoppingCarts: ShoppingCart[] = [
+      new ShoppingCart("BMW",2000,4,false)];
 
-  constructor(private http: Http) {
-    // this.shoppingCarts=ShoppingCart;
-    this.shoppingCarts=[
-      {name:"BMW", price:2000, quantity:4, isEdit:false},
-      {name:"BMW2", price:3000, quantity:3, isEdit:false}
-    ]
-
-    // this.getItems().then(shoppingCarts => this.shoppingCarts = shoppingCarts);
-  }
-
+  constructor(public http: Http) {}
 //   addItem(){
 //     this.shoppingCarts.push();
 //   }

@@ -1,7 +1,7 @@
 <hr>
 <div class="row">
   <div class="col-md-3">
-    <form (ngSubmit)="onSubmit()">
+    <form>
       <div>
          <label for="">產品名稱</label>
          <input class="form-control" type="text" [(ngModel)]="name">
@@ -15,7 +15,7 @@
         <input class="form-control" type="text"  [(ngModel)]="quantity">
       </div>
       <p>{{name}} | ${{price}} * {{quantity}} = ${{calculate(price,quantity)}}</p>
-      <button class="btn btn-success" type="submit">加入購物車</button>
+      <button class="btn btn-success" type="submit" (click)="onSubmit()">加入購物車</button>
     </form>
   </div>
 </div>
