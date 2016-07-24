@@ -1,8 +1,16 @@
 export class ShoppingCart {
-  constructor(public name:string, public price:number, public quantity:number){
-    new ShoppingCart('item1',1,1);
-    new ShoppingCart('item2',2,2);
-    new ShoppingCart('item3',3,3);
+
+  // public shoppingCarts: Array<ShoppingCart>;
+  constructor(public name:string=null,
+              public price:number=null,
+              public quantity:number=null,
+              public isEdit=false){
+
+
+      // new ShoppingCart("BMW", 2000, 4),
+      // new ShoppingCart("BMW2", 3000, 5)
+
+
   }
 
   toString(){

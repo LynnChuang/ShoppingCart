@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartFormComponent } from '../shopping-cart-form';
-import { ShoppingCartListComponent } from '../shopping-cart-list';
+import { ShoppingCartFormComponent } from '../shopping-cart-form/';
+import { ShoppingCartListComponent } from '../shopping-cart-list/';
 
 @Component({
   moduleId: module.id,

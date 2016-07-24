@@ -37,6 +37,7 @@ const barrels: string[] = [
   'app/shopping-cart-form',
   'app/shopping-cart-list',
   'app/shopping-cart',
+  'app/shopping-carts',
   /** @cli-barrel */
 ];
 

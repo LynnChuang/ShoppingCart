@@ -1,0 +1,20 @@
+{
+  "status": "200",
+  "data": [
+    {
+      "name": "BMW",
+      "price": 1000,
+      "quantity": 1
+    },
+    {
+      "name": "BMW2",
+      "price": 2000,
+      "quantity": 2
+    },
+    {
+      "name": "BMW3",
+      "price": 3000,
+      "quantity": 3
+      }
+  ]
+}

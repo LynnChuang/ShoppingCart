@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from '../shopping-cart.service/';
+import { ShoppingCart } from '../shopping-cart';
 
 @Component({
   moduleId: module.id,
@@ -8,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartFormComponent implements OnInit {
 
-  constructor() {}
+  // name:string="ProductName"
+  price:number=0;
+  quantity:number=0;
+  private shoppingCart:ShoppingCart;
+  constructor(private shoppingCartService:ShoppingCartService=null) {}
 
   ngOnInit() {
+    // this.shoppingCart=new ShoppingCart();
   }
 
+  calculate(price,quantity){
+    return price*quantity;
+  }
+
+  onSubmit(){
+    this.shoppingCartService.shoppingCarts.push(this.shoppingCart);
+    this.shoppingCart=new ShoppingCart();
+  }
 }
