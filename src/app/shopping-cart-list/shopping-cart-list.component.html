@@ -26,8 +26,8 @@
             <div *ngIf="shoppingCart.isEdit">
               <input type="number" [(ngModel)]="shoppingCart.quantity2">
               <br>
-              <button class="btn-primary" (click)="confirmEdit(shoppingCart)">V</button>
-              <button class="btn-danger" (click)="cancelEdit(shoppingCart)">X</button>
+              <button class="btn btn-sm btn-primary" (click)="confirmEdit(shoppingCart)">V</button>
+              <button class="btn btn-sm btn-danger" (click)="cancelEdit(shoppingCart)">X</button>
             </div>
         </td>
         <td>{{calculatePrice(shoppingCart.price,shoppingCart.quantity)}}</td>
