@@ -10,11 +10,11 @@ import {
   async, inject
 } from '@angular/core/testing';
 
-import { ShoppingCartComponent } from './shopping-cart.component';
+import { ShoppingCartsComponent } from './shopping-carts.component';
 
-describe('Component: ShoppingCart', () => {
+describe('Component: ShoppingCarts', () => {
   it('should create an instance', () => {
-    let component = new ShoppingCartComponent();
+    let component = new ShoppingCartsComponent();
     expect(component).toBeTruthy();
   });
 });
